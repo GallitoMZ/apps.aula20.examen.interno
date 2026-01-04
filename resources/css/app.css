@@ -1,0 +1,141 @@
+@import "tailwindcss";
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@layer base {
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+@layer base {
+    dialog {
+        margin: auto;
+    }
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card-info {
+    @apply rounded-lg shadow border px-4 py-3;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@theme {
+    /* Colores personalizados - Aula20 */
+    --color-aula20: #002CFF;
+    --color-aula20-50: #E0E6FF;
+    --color-aula20-100: #CCD5FF;
+    --color-aula20-200: #A3B3FF;
+    --color-aula20-300: #7A91FF;
+    --color-aula20-400: #5270FF;
+    --color-aula20-500: #294EFF;
+    --color-aula20-600: #002CFF;
+    --color-aula20-700: #0022C7;
+    --color-aula20-800: #00198F;
+    --color-aula20-900: #000F57;
+    --color-aula20-950: #000A3B;
+
+    /* Colores personalizados - Secondary */
+    --color-secondary: #21DFAF;
+    --color-secondary-50: #C1F6E9;
+    --color-secondary-100: #B0F4E2;
+    --color-secondary-200: #8CEED6;
+    --color-secondary-300: #68E9C9;
+    --color-secondary-400: #45E4BC;
+    --color-secondary-500: #21DFAF;
+    --color-secondary-600: #19AF89;
+    --color-secondary-700: #127E63;
+    --color-secondary-800: #0B4D3C;
+    --color-secondary-900: #041C16;
+    --color-secondary-950: #000302;
+
+    /* Colores personalizados - Pearl */
+    --color-pearl: #081830;
+    --color-pearl-50: #A3C2F0;
+    --color-pearl-100: #92B6ED;
+    --color-pearl-200: #6F9FE7;
+    --color-pearl-300: #4C87E1;
+    --color-pearl-400: #2970DB;
+    --color-pearl-500: #1F5EBC;
+    --color-pearl-600: #194C99;
+    --color-pearl-700: #143B76;
+    --color-pearl-800: #0E2953;
+    --color-pearl-900: #081830;
+    --color-pearl-950: #040C18;
+
+    /* Colores personalizados - Mountain */
+    --color-mountain-50: #eafff6;
+    --color-mountain-100: #cdfee7;
+    --color-mountain-200: #a0fad5;
+    --color-mountain-300: #63f2bf;
+    --color-mountain-400: #25e2a5;
+    --color-mountain-500: #00ba84;
+    --color-mountain-600: #00a475;
+    --color-mountain-700: #008361;
+    --color-mountain-800: #00674e;
+    --color-mountain-900: #005541;
+    --color-mountain-950: #003026;
+}
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); scale: 0.98; }
+    to { opacity: 1; transform: translateY(0); scale: 1; }
+}
+
+/* Ajustes finos para inputs autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
