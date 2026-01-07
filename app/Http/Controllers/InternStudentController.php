@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\InternStudent;
+use App\Models\StudentSimulacro;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -27,7 +27,7 @@ class InternStudentController extends Controller
                 'dni.digits' => 'El DNI debe tener 8 dígitos',
             ]);
 
-            $student = InternStudent::where('dni', $request->dni)->first();
+            $student = StudentSimulacro::where('dni', $request->dni)->first();
 
             if (!$student) {
                 return response()->json([
