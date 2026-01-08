@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
 
     <title inertia>{{ config('app.name', 'Aula 20') }}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
@@ -26,9 +27,6 @@
     <meta name="msapplication-TileColor" content="#000a3b">
     <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#000a3b">
-    <meta name="description" content="Academia Aula 20, somos una academia preuniversitaria que forma estudiantes de alto nivel para el ingreso universitario, con la metodología Integral 20." />
-    <meta name="keywords" content="Aula 20, academia preuniversitaria, ingreso a universidades, alto rendimiento académico, formación cultural, metodología Integral 20, preparación universitaria, estudiantes destacados, educación integral, academia en Perú">
-
 
     @routes
     @vite(['resources/js/app.ts', "resources/js/Pages/{$page['component']}.vue"])
