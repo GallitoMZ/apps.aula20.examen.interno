@@ -6,7 +6,10 @@ import Swal from 'sweetalert2';
 import MainLayout from '@/Layouts/MainLayout.vue'; // Asegúrate que la ruta sea correcta
 import { useColorMode } from '@vueuse/core';
 
-const mode = useColorMode();
+const mode = useColorMode({
+    disableTransition: false,
+    initialValue: 'light'
+});
 const isDark = computed(() => mode.value === 'dark');
 
 const loading = ref(false);
