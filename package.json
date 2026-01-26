@@ -25,6 +25,7 @@
         "vue-tsc": "^2.2.12"
     },
     "dependencies": {
+        "@vueuse/core": "^14.1.0",
         "lucide-vue-next": "^0.562.0",
         "sweetalert2": "^11.26.17"
     }

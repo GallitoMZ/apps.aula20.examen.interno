@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex, nofollow, noarchive">
 
     <title inertia>{{ config('app.name', 'Aula 20') }}</title>
+
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
@@ -26,29 +27,15 @@
 
     <meta name="msapplication-TileColor" content="#000a3b">
     <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
-    <meta name="theme-color" content="#000a3b">
+    <meta name="theme-color" content="#ffffff">
 
     @routes
     @vite(['resources/js/app.ts', "resources/js/Pages/{$page['component']}.vue"])
     @inertiaHead
 </head>
 
-<body class="font-sans antialiased text-gray-100 bg-aula20-950 min-h-screen selection:bg-aula20-500 selection:text-white overflow-x-hidden">
-
-    <div class="fixed inset-0 -z-50 h-full w-full bg-aula20-950">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,var(--color-aula20-600),transparent_60%)] opacity-40"></div>
-
-        <div class="absolute inset-0 bg-[url('/assets/img/FondoMain.svg')] bg-repeat opacity-20 mix-blend-overlay"></div>
-
-        <div class="absolute bottom-0 right-0 w-125 h-125 bg-secondary-600/20 blur-[100px] rounded-full translate-y-1/3 translate-x-1/3"></div>
-
-        <div class="absolute inset-0 bg-black/40"></div>
-    </div>
-
-    <div class="relative z-0 flex flex-col min-h-screen">
-        @inertia
-    </div>
-
+<body class="font-sans antialiased bg-white dark:bg-gray-950 transition-colors duration-500 min-h-screen selection:bg-aula20-500 selection:text-white overflow-x-hidden">
+    @inertia
 </body>
 
 </html>
